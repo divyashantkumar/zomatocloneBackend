@@ -583,7 +583,7 @@ app.put('/updateFood', async (req, res) => {
     }
 });
 
-// CALL A SERVER AND LISTEN
+
 app.listen(PORT, function (err) {
     if (err) console.error(err)
     console.log("Server is running in port", PORT)
