@@ -2,7 +2,7 @@ import mongodb from 'mongodb'
 let MongoClient = mongodb.MongoClient;
 import bcrypt from 'bcrypt';
 import express from 'express';
-const uri = "mongodb+srv://divyashantkumar:test@cluster0.rmt4d0c.mongodb.net/?retryWrites=true&w=majority";
+const uri = process.env.MONGODB_CONNECTION_URI;
 import xlsxFile from 'read-excel-file/node';
 import jwt from 'jsonwebtoken';
 
@@ -63,8 +63,7 @@ const quickResturantFilters = [
     }
 ]
 
-const client = new MongoClient(uri, {
-});
+const client = new MongoClient(uri, {});
 
 const app = express();
 const PORT = 9191;
