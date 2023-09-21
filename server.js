@@ -94,7 +94,7 @@ function getHeaderFromToken(token) {
     return decodedToken;
 }
 
-// GETTING END POINTS
+// END POINTS
 app.get('/getFood', async (req, res) => {
     try {
         console.log(req.headers.token)
